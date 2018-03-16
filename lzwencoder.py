@@ -79,16 +79,16 @@ class LzwEncoder(object):
         return response or ""
 
     def test_result(self, original, encoded, decoded):
-        print "\nOriginal:\n--------------------"
-        print "Entry: " + original + "\n"
-        print "length: " + str(len(original)*5) + "\n"
-        print "Encoded: " + str(encoded) + "\n\n"
-        print "Decoded - Should Match Original:\n--------------------"
-        print "Entry: " + str(encoded) + "\n"
-        print "Decoded: " + decoded + "\n"
-        print "length: " + str(len(encoded))
+        print("\nOriginal:\n--------------------")
+        print("Entry: ", original, "\n")
+        print("length: ", str(len(original)*5) + "\n")
+        print("Encoded: ", str(encoded), "\n\n")
+        print("Decoded - Should Match Original:\n--------------------")
+        print("Entry: ", str(encoded), "\n")
+        print("Decoded: ", decoded , "\n")
+        print("length: ", str(len(encoded)))
         if decoded == original[:-1] and decoded == self.decode(encoded):
-            print "\nStatus:  success!"
+            print("\nStatus:  success!")
         else:
-            print "\nStatus:  FAIL"
-        print "\n\n\n"
+            print("\nStatus:  FAIL")
+        print("\n\n\n")
